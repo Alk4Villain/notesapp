@@ -1,0 +1,13 @@
+<h1>Catatan</h1>
+<a href="/new">+ Tambah Catatan</a>
+<ul>
+  <% notes.forEach(note => { %>
+    <li>
+      <strong><%= note.title %></strong> - <%= note.content %><br>
+      <a href="/<%= note._id %>/edit">Edit</a>
+      <form action="/<%= note._id %>?_method=DELETE" method="POST" style="display:inline;">
+        <button>Hapus</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>

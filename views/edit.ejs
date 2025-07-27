@@ -1,0 +1,7 @@
+<h1>Edit Catatan</h1>
+<form action="/<%= note._id %>?_method=PUT" method="POST">
+  <input name="title" value="<%= note.title %>"><br>
+  <textarea name="content"><%= note.content %></textarea><br>
+  <button type="submit">Update</button>
+</form>
+<a href="/">← Kembali</a>
